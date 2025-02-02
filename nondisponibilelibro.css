@@ -13,14 +13,18 @@ body {
       font-size: 16px;
 }
 
+.li {
+  font-size: 14px;
+}
+
 .logo {
    font-size: 24px;
    font-weight: bold;
    color: #fff;
    text-transform: uppercase;
    white-space: nowrap;
-   position: fixed;
-   top: 58px; /* Aggiusta questo valore per allinearlo con il menu */
+   position: absolute; /* Cambiato da fixed a absolute */
+   top: 58px; /* Mantiene la posizione iniziale */
    left: 15px;
    z-index: 1000;
 }
@@ -77,15 +81,6 @@ body {
   max-width: 1350px;
 }
 
-
-/* Stile per il menu nella versione desktop */
-.menu {
-    transition: all 1s cubic-bezier(.215, .61, .355, 1);
-    width: 100%;
-    z-index: 0;
-    position: relative; /* Posizionamento relativo per desktop */
-    left: 150px; /* Spostamento a destra per desktop */
-}
 
 /* Stile per il menu nella versione desktop */
 .menu {
@@ -223,6 +218,7 @@ body {
 }
 
 
+
 .container {
   display: flex;
   justify-content: center;
@@ -245,6 +241,7 @@ body {
     padding: 30px 15px; /* Riduce il padding per ottimizzare lo spazio */
   }
 }
+
 
 .support-box {
   text-align: center;
@@ -281,10 +278,6 @@ body {
   margin: 20px 0;
 }
 
-.button-group {
-  margin-top: 30px;
-}
-
 .support-list {
   list-style: none; /* Rimuove i punti predefiniti */
   padding: 0; /* Elimina il padding */
@@ -305,36 +298,36 @@ body {
 }
 
 .support-button {
-    color: #ffd700; /* Colore del testo (giallo dorato) */
+    display: inline-block;
+    width: auto; /* Evita che il bottone sia troppo largo */
+    max-width: 100%;
+    padding: 10px 20px; /* Aumenta lo spazio interno */
+    text-align: center;
+    color: #ffd700;
     text-decoration: none;
-    border: 1px solid #ffd700; /* Bordo trasparente */
-    padding: 5px 10px;
-    border-radius: 5px; /* Angoli arrotondati */
+    border: 1px solid #ffd700;
+    border-radius: 5px;
     font-size: 14px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    letter-spacing: 0.5px; /* Uniforma la spaziatura tra le lettere */
 }
 
 .support-button:hover {
-    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
-    color: #000; /* Colore del testo al passaggio del mouse */
-    border: 1px solid #ffd700; /* Mantiene il bordo */
+    background-color: #ffd700;
+    color: #000;
+    border: 1px solid #ffd700;
 }
 
-.support-lol {
-    color: #ffd700; /* Colore del testo (giallo dorato) */
-    text-decoration: none;
-    border: 1px solid #ffd700; /* Bordo trasparente */
-    padding: 5px 10px;
-    border-radius: 5px; /* Angoli arrotondati */
-    font-size: 14px;
-    transition: all 0.3s ease;
+.button-group {
+    display: flex;
+    flex-direction: column; /* Dispone i bottoni in colonna */
+    align-items: center; /* Centra i bottoni */
+    gap: 10px; /* Aggiunge spazio tra i bottoni */
+    margin-top: 30px;
+    width: 100%;
 }
 
-.support-lol:hover {
-    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
-    color: #000; /* Colore del testo al passaggio del mouse */
-    border: 1px solid #ffd700; /* Mantiene il bordo */
-}
 
 
 .support-label {
@@ -349,7 +342,6 @@ body {
     display: block; /* Forza il testo ad andare a capo */
     margin-top: 5px; /* Spazio sopra il testo */
 }
-
 
 .non-disponibile {
   font-size: 16px; /* Imposta la dimensione del font più piccola */
