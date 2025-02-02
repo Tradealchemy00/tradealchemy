@@ -219,13 +219,22 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  width: 60%; /* Riduci la larghezza da 80% a 60% */
-  max-width: 700px; /* Riduci la larghezza massima da 900px a 700px */
+  width: 60%; /* Larghezza predefinita per schermi più grandi */
+  max-width: 700px; /* Limite massimo di larghezza */
   background: linear-gradient(145deg, #1e1e1e, #292929);
   box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
   border-radius: 15px;
   text-align: center;
   margin-top: 100px;
+}
+
+/* Adattamento per dispositivi mobili */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Aumenta la larghezza per evitare che sia troppo stretto */
+    max-width: 100%; /* Evita restrizioni di larghezza */
+    padding: 30px 15px; /* Riduce il padding per ottimizzare lo spazio */
+  }
 }
 
 .support-box {
