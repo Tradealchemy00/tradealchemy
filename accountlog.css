@@ -114,7 +114,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.005); /* Sfondo trasparente */
+  background-color: #000000; /* Nero assoluto */
   display: none;
   padding: 0;
   margin: 0;
