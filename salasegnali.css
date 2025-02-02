@@ -250,14 +250,37 @@ body {
 }
 
 .container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    width: 80%;
-    max-width: 1200px;
-    background: linear-gradient(145deg, #1e1e1e, #292929);
-    box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
-    border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  width: 60%; /* Larghezza predefinita per schermi più grandi */
+  max-width: 700px; /* Limite massimo di larghezza */
+  background: linear-gradient(145deg, #1e1e1e, #292929);
+  box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Adattamento per dispositivi mobili */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Aumenta la larghezza per evitare che sia troppo stretto */
+    max-width: 100%; /* Evita restrizioni di larghezza */
+    padding: 30px 15px; /* Riduce il padding per ottimizzare lo spazio */
+  }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Dispone le colonne una sotto l'altra */
+        align-items: center; /* Centra il contenuto */
+    }
+
+    .column {
+        width: 90%; /* Imposta una larghezza adeguata */
+    }
 }
 
 .column {
