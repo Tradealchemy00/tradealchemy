@@ -278,10 +278,6 @@ body {
   margin: 20px 0;
 }
 
-.button-group {
-  margin-top: 30px;
-}
-
 .support-list {
   list-style: none; /* Rimuove i punti predefiniti */
   padding: 0; /* Elimina il padding */
@@ -302,19 +298,32 @@ body {
 }
 
 .support-button {
-    color: #ffd700; /* Colore del testo (giallo dorato) */
+    display: block; /* Occupa tutta la larghezza disponibile */
+    width: 100%; /* Impedisce la rottura su due righe */
+    max-width: 300px; /* Imposta una larghezza massima per evitare che sia troppo grande */
+    text-align: center;
+    color: #ffd700;
     text-decoration: none;
-    border: 1px solid #ffd700; /* Bordo trasparente */
-    padding: 5px 10px;
-    border-radius: 5px; /* Angoli arrotondati */
+    border: 1px solid #ffd700;
+    padding: 10px 15px; /* Aumenta il padding per un aspetto migliore */
+    border-radius: 5px;
     font-size: 14px;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Evita che il testo vada a capo */
 }
 
 .support-button:hover {
-    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
-    color: #000; /* Colore del testo al passaggio del mouse */
-    border: 1px solid #ffd700; /* Mantiene il bordo */
+    background-color: #ffd700;
+    color: #000;
+    border: 1px solid #ffd700;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Centra il bottone */
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
 }
 
 .support-lol {
