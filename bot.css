@@ -273,6 +273,17 @@ body {
     margin-top: 70px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Dispone le colonne una sotto l'altra */
+        align-items: center; /* Centra il contenuto */
+    }
+
+    .column {
+        width: 90%; /* Imposta una larghezza adeguata */
+    }
+}
+
 .column {
     flex: 1;
     background: linear-gradient(145deg, #222222, #2a2a2a);
