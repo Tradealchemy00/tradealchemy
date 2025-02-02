@@ -298,18 +298,19 @@ body {
 }
 
 .support-button {
-    display: block; /* Occupa tutta la larghezza disponibile */
-    width: 100%; /* Impedisce la rottura su due righe */
-    max-width: 300px; /* Imposta una larghezza massima per evitare che sia troppo grande */
+    display: inline-block;
+    width: auto; /* Evita che il bottone sia troppo largo */
+    max-width: 100%;
+    padding: 10px 20px; /* Aumenta lo spazio interno */
     text-align: center;
     color: #ffd700;
     text-decoration: none;
     border: 1px solid #ffd700;
-    padding: 10px 15px; /* Aumenta il padding per un aspetto migliore */
     border-radius: 5px;
     font-size: 14px;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Evita che il testo vada a capo */
+    white-space: nowrap;
+    letter-spacing: 0.5px; /* Uniforma la spaziatura tra le lettere */
 }
 
 .support-button:hover {
@@ -320,11 +321,12 @@ body {
 
 .button-group {
     display: flex;
-    justify-content: center; /* Centra il bottone */
+    justify-content: center;
     align-items: center;
     margin-top: 30px;
     width: 100%;
 }
+
 
 .support-lol {
     color: #ffd700; /* Colore del testo (giallo dorato) */
