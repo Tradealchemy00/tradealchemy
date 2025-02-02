@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supporto - TradeAlchemy</title>
+  <link rel="stylesheet" href="lives.css">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="logo">
+  <span class="trade">Trade</span> <span class="alchemy">Alchemy</span>
+</div>
+<div class="header">
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li class="has-submenu">
+      <a href="#">Trading</a>
+      <ul class="submenu">
+        <li><a href="salasegnali.html">Sale segnali</a></li>
+        <li><a href="bot.html">I nostri bot telegram</a></li>
+        <li><a href="nondisponibile.html">Indicatore tradingview</a></li>
+        <li><a href="nondisponibilecopy.HTML">Il nostro copy trading</a></li>
+          <li><a href="#">il nostro broker axi</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+  <a href="#">Formazione e Live</a>
+  <ul class="submenu">
+      <li><a href="nondisponibileformazione.html">one to one</a></li>
+      <li><a href="nondisponibilelibro.html">libro trading</a></li>
+      <li><a href="lives.html">Live</a></li>
+      <li><a href="https://instagram.com/tradealchemyvip" target="_blank">Instagram</a></li>
+  </ul>
+</li>
+    <li><a href="affiliazioni.html">Affiliazioni</a></li>
+    <li class="has-submenu">
+      <a href="#">Chi Siamo</a>
+      <ul class="submenu">
+        <li><a href="https://instagram.com/tradealchemyvip" target="_blank">Instagram 1</a></li>
+        <li><a href="https://t.me/tradealchemy" target="_blank">canale Telegram</a></li>
+        <li><a href="https://instagram.com/blesszava" target="_blank">Instagram 2</a></li>
+        <li><a href="https://wa.me/+393517025647" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.myfxbook.com/" target="_blank">Myfxbook</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Recensioni</a>
+      <ul class="submenu">
+        <li><a href="reces.html">Recensioni</a></li>
+        <li><a href="https://www.myfxbook.com/" target="_blank">Myfxbook</a></li>
+      </ul>
+    </li>
+      <li><a href="support.html">supporto</a></li>
+
+    <li>
+    <div class="cta">
+      <input type="text" placeholder="Cerca..." class="search-bar">
+    </div>
+  </li>
+  <li class="has-submenu">
+  <a href="#">
+      <img src="user.png" alt="User Menu" style="width: 30px; height: 30px; vertical-align: middle;"> <!-- Logo user.png -->
+  </a>
+  <ul class="submenu">
+    <li><a href="accountreg.html">Sign Up</a></li> <!-- Link alla pagina di registrazione -->
+    <li><a href="accountlog.html">Log In</a></li> <!-- Link alla pagina di login -->
+  </ul>
+</li>
+  </ul>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="support-box">
+      <h1 class="animated-title">LIVE Trade Alchemy</h1>
+        <div class="calendar">
+          <div class="live-event">
+            <h2>Live Trading: 15 Gennaio 2025</h2>
+            <p class="live-date">14:00 15 Gennaio 2025</p>
+            <p class="countdown" id="countdown-1">Countdown: 00:00:00</p>
+          </div>
+          <!-- Aggiungi qui altre live se necessario -->
+      <div class="button-group">
+        <a href="https://instagram.com/tradealchemyvip" target="_blank" class="support-button">JOIN LIVE INSTAGRAM</a>
+      </div>
+      <p class="description">
+        TEMI DELLA LIVE:
+         <ul class="support-list">
+          <li>Operazioni trading in live</li>
+          <li>Domande su bot, indicatori</li>
+          <li>Domande sui segnali, sale segnali, broker</li>
+          <li>Domande sul trading, money managment</li>
+          <li>Domande anche su altro non presente qui</li>
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <video autoplay muted loop id="video-back">
+    <source src="video-back.mp4" type="video/mp4">
+  </video>
+
+  <!-- Jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js" integrity="sha512-Nx/M3T/fWprNarYOrnl+gfWZ25YlZtSNmhjHeC0+2gCtyAdDFXqaORJBj1dC427zt3z/HwkUpPX+cxzonjUgrA==" crossorigin="anonymous"></script>
+   <script>
+     $(document).ready(function() {
+       $(".hamburger").on('click', function() {
+         $(".menu").toggleClass("menu--open");
+       });
+     });
+     ScrollReveal().reveal('.reveal', { distance: '100px', duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600 });
+     ScrollReveal().reveal('.zoom', { duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 200, scale: 0.65, mobile: false });
+   </script>
+
+   <script>
+     // Funzione per calcolare il countdown
+     function updateCountdown(liveDate, countdownElement) {
+       const countDownDate = new Date(liveDate).getTime();
+       const now = new Date().getTime();
+       const distance = countDownDate - now;
+
+       if (distance <= 0) {
+         countdownElement.innerHTML = "La live è in corso!";
+       } else {
+         const days = Math.floor(distance / (1000 * 60 * 60 * 24)); // Calcolo dei giorni
+         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+         // Output con giorni, ore, minuti e secondi
+         countdownElement.innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+       }
+     }
+
+     // Impostare le date delle live
+     const liveDate1 = "2025-01-15T14:00:00"; // Data della prima live
+     const countdownElement1 = document.getElementById("countdown-1");
+
+     setInterval(() => {
+       updateCountdown(liveDate1, countdownElement1);
+     }, 1000); // Aggiorna ogni secondo
+   </script>
+
+
+</body>
+</html>

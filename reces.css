@@ -1,0 +1,389 @@
+/* ! Base Style */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', serif; /* Sostituisci con 'Liberation Serif' se disponibile */
+      font-size: 16px;
+}
+
+.column h2 {
+  color: #42ff80;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: #555;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.star:hover,
+.star.active {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+textarea {
+  width: 90%; /* Riduci leggermente la larghezza */
+  height: 100px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 0 auto 15px; /* Margine superiore/centrale e inferiore */
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 16px;
+  display: block; /* Assicura che il margine orizzontale funzioni */
+}
+
+textarea::placeholder {
+  color: #888;
+}
+
+button {
+  background-color: #42ff80;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #36cc65;
+  transform: scale(1.05);
+}
+
+.logo {
+   font-size: 24px;
+   font-weight: bold;
+   color: #fff;
+   text-transform: uppercase;
+   white-space: nowrap;
+   position: fixed;
+   top: 58px; /* Aggiusta questo valore per allinearlo con il menu */
+   left: 15px;
+   z-index: 1000;
+}
+
+.trade {
+  color: #00FF00; /* Iniziale verde lime per "Trade" */
+  animation: colorChangeTrade 5s infinite alternate; /* Animazione per "Trade" */
+}
+
+.alchemy {
+  color: #FF0000; /* Iniziale rosso lime per "Alchemy" */
+  animation: colorChangeAlchemy 5s infinite alternate; /* Animazione per "Alchemy" */
+}
+
+@keyframes colorChangeTrade {
+  0% { color: #00FF00; } /* Verde lime iniziale */
+  25% { color: #32CD32; } /* Un'altra sfumatura di verde */
+  50% { color: #C0C0C0; } /* Argento cromato */
+  75% { color: #FFD700; } /* Oro lucido */
+  100% { color: #00FF00; } /* Torna al verde lime */
+}
+
+@keyframes colorChangeAlchemy {
+  0% { color: #FF0000; } /* Rosso lime iniziale */
+  25% { color: #FF6347; } /* Un'altra sfumatura di rosso */
+  50% { color: #C0C0C0; } /* Argento cromato */
+  75% { color: #FFD700; } /* Oro lucido */
+  100% { color: #FF0000; } /* Torna al rosso lime */
+}
+
+#video-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Posiziona il video dietro tutti gli altri elementi */
+    opacity: 0.8; /* Regola l'opacità per un effetto più gradevole (opzionale) */
+    pointer-events: none; /* Rende il video non interattivo */
+}
+
+/* ! Header */
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  display: flex;
+  max-width: 1350px;
+}
+
+
+/* Stile per il menu nella versione desktop */
+.menu {
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    width: 100%;
+    z-index: 0;
+    position: relative; /* Posizionamento relativo per desktop */
+    left: 150px; /* Spostamento a destra per desktop */
+}
+
+.menu {
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  width: 100%;
+  z-index: 0;
+  position: relative; /* Assicurati che abbia un posizionamento relativo */
+  left: 150px; /* Aggiungi questa proprietà per spostare il menu a destra */
+}
+
+.menu li {display: inline-block; position: relative;}
+.menu li a {
+  color: #fff; /* Testo bianco */
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.005); /* Sfondo trasparente */
+  transition: background 0.3s ease;
+}
+
+/* Sotto-menu */
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.005); /* Sfondo trasparente */
+  display: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  border: 1px solid #444;
+}
+
+.submenu li {
+  width: 200px;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  color: #fff; /* Colore del testo bianco */
+  background: none; /* Rimuove il gradiente */
+  -webkit-text-fill-color: white; /* Mantiene il colore bianco per il testo */
+  transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #fff; /* Colore del testo bianco anche su hover */
+  animation: gradient-move 5s infinite, fade-in 0.5s ease-out;
+}
+  /* Mostra il sotto-menu al passaggio del mouse */
+  .has-submenu:hover .submenu {
+    display: block;
+  }
+
+  /* Aggiungi questi stili alla fine della tua sezione .cta nel CSS */
+
+  .cta {
+    /* Puoi aggiungere eventuali stili pre-esistenti per la CTA, se necessari */
+  }
+
+  .cta .search-bar {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: white;
+    width: 200px; /* Puoi personalizzare la larghezza */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Per eventuali transizioni al passaggio del mouse */
+  }
+
+  .cta .search-bar:focus {
+    border-color: #316bff; /* Colore del bordo al focus */
+    outline: none;
+  }
+
+
+/* Media query per la versione mobile */
+@media (max-width: 768px) {
+    .menu {
+        position: absolute; /* Cambia a posizionamento assoluto */
+        top: 0;
+        right: 0;
+        left: auto;
+        background: #000;
+        height: 100vh;
+        padding-top: 80px;
+        transform: translateX(100%); /* Inizia a destra fuori schermo */
+        transition: transform 1s ease; /* Applica la transizione alla trasformazione */
+    }
+
+    .menu--open {
+        transform: translateX(0); /* Quando aperto, torna a sinistra */
+        right: 0%;
+     left: 0; /* Imposta il bordo sinistro a 0 */
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+
+    .hamburger span {
+        background: #fff;
+        height: 3px;
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .menu li {
+        display: block;
+    }
+
+    .menu li a {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 5px;
+  width:40%;
+  max-width: 1000px;
+  background: linear-gradient(145deg, #1e1e1e, #292929);
+  box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 5s infinite, fade-in 3s ease-out;
+  margin-top: 120px; /* Aggiungi margine superiore per spostarlo più in basso */
+}
+
+.column {
+    flex: 1;
+    max-width: 350px; /* Imposta una larghezza massima per la colonna */
+    margin: 0 auto; /* Centra la colonna orizzontalmente */
+    background: linear-gradient(145deg, #222222, #2a2a2a);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #0c0c0c, -5px -5px 15px #343434;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #484848;
+}
+
+/* Stili per le recensioni */
+.review-card {
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #484848;
+}
+
+.review-title {
+    font-size: 1.5rem;
+    color: #42ff80;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 1.5rem;
+}
+
+.rating span {
+    color: gold;
+}
+
+.poster__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.superbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.supercolu {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: linear-gradient(145deg, #222222, #2a2a2a);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #0c0c0c, -5px -5px 15px #343434;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supercolu:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #484848;
+}

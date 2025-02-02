@@ -1,0 +1,725 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', serif; /* Sostituisci con 'Liberation Serif' se disponibile */
+      font-size: 16px;
+}
+
+.footer-content {
+    text-align: center; /* Allinea il testo al centro */
+    color: #ffffff; /* Imposta il colore del testo su bianco */
+    font-size: 14px; /* Imposta la dimensione del testo a 14px */
+    font-family: 'Libre Baskerville', serif; /* Usa il font specificato */
+    margin: 0; /* Rimuove il margine */
+    padding: 10px 0; /* Aggiungi un po' di spazio sopra e sotto */
+}
+
+.footer-content a {
+    color: #ffffff; /* Imposta il colore dei link su bianco */
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    font-size: 14px; /* Imposta la dimensione del font dei link uguale a quella del testo */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura quando il link è attivo */
+}
+
+.logo {
+   font-size: 24px;
+   font-weight: bold;
+   color: #fff;
+   text-transform: uppercase;
+   white-space: nowrap;
+   position: fixed;
+   top: 58px; /* Aggiusta questo valore per allinearlo con il menu */
+   left: 15px;
+   z-index: 1000;
+}
+
+.trade {
+  color: #00FF00; /* Iniziale verde lime per "Trade" */
+  animation: colorChangeTrade 5s infinite alternate; /* Animazione per "Trade" */
+}
+
+.alchemy {
+  color: #FF0000; /* Iniziale rosso lime per "Alchemy" */
+  animation: colorChangeAlchemy 5s infinite alternate; /* Animazione per "Alchemy" */
+}
+
+@keyframes colorChangeTrade {
+  0% { color: #00FF00; } /* Verde lime iniziale */
+  25% { color: #32CD32; } /* Un'altra sfumatura di verde */
+  50% { color: #C0C0C0; } /* Argento cromato */
+  75% { color: #FFD700; } /* Oro lucido */
+  100% { color: #00FF00; } /* Torna al verde lime */
+}
+
+@keyframes colorChangeAlchemy {
+  0% { color: #FF0000; } /* Rosso lime iniziale */
+  25% { color: #FF6347; } /* Un'altra sfumatura di rosso */
+  50% { color: #C0C0C0; } /* Argento cromato */
+  75% { color: #FFD700; } /* Oro lucido */
+  100% { color: #FF0000; } /* Torna al rosso lime */
+}
+
+#video-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Posiziona il video dietro tutti gli altri elementi */
+    opacity: 0.8; /* Regola l'opacità per un effetto più gradevole (opzionale) */
+    pointer-events: none; /* Rende il video non interattivo */
+}
+
+/* ! Header */
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  display: flex;
+  max-width: 1350px;
+}
+
+
+/* Stile per il menu nella versione desktop */
+.menu {
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    width: 100%;
+    z-index: 0;
+    position: relative; /* Posizionamento relativo per desktop */
+    left: 150px; /* Spostamento a destra per desktop */
+}
+
+.menu {
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  width: 100%;
+  z-index: 0;
+  position: relative; /* Assicurati che abbia un posizionamento relativo */
+  left: 150px; /* Aggiungi questa proprietà per spostare il menu a destra */
+}
+
+.menu li {display: inline-block; position: relative;}
+.menu li a {
+  color: #fff; /* Testo bianco */
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.005); /* Sfondo trasparente */
+  transition: background 0.3s ease;
+}
+
+/* Sotto-menu */
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.005); /* Sfondo trasparente */
+  display: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  border: 1px solid #444;
+}
+
+.submenu li {
+  width: 200px;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  color: #fff; /* Colore del testo bianco */
+  background: none; /* Rimuove il gradiente */
+  -webkit-text-fill-color: white; /* Mantiene il colore bianco per il testo */
+  transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #fff; /* Colore del testo bianco anche su hover */
+  animation: gradient-move 5s infinite, fade-in 0.5s ease-out;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+/* Mostra il sotto-menu al passaggio del mouse */
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Aggiungi questi stili alla fine della tua sezione .cta nel CSS */
+
+.cta {
+  /* Puoi aggiungere eventuali stili pre-esistenti per la CTA, se necessari */
+}
+
+.cta .search-bar {
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  background-color: white;
+  width: 200px; /* Puoi personalizzare la larghezza */
+  font-size: 16px;
+  transition: all 0.3s ease; /* Per eventuali transizioni al passaggio del mouse */
+}
+
+.cta .search-bar:focus {
+  border-color: #316bff; /* Colore del bordo al focus */
+  outline: none;
+}
+
+/* Media query per la versione mobile */
+@media (max-width: 768px) {
+    .menu {
+        position: absolute; /* Cambia a posizionamento assoluto */
+        top: 0;
+        right: 0;
+        left: auto;
+        background: #000;
+        height: 100vh;
+        padding-top: 80px;
+        transform: translateX(100%); /* Inizia a destra fuori schermo */
+        transition: transform 1s ease; /* Applica la transizione alla trasformazione */
+    }
+
+    .menu--open {
+        transform: translateX(0); /* Quando aperto, torna a sinistra */
+        right: 0%;
+     left: 0; /* Imposta il bordo sinistro a 0 */
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+
+    .hamburger span {
+        background: #fff;
+        height: 3px;
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .menu li {
+        display: block;
+    }
+
+    .menu li a {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  width: 80%;
+  max-width: 800px;
+  background: linear-gradient(145deg, #1e1e1e, #292929);
+  box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.support-box {
+  text-align: center;
+  width: 100%;
+}
+
+
+
+/* BG Cover */
+.bg-cover {
+  display: flex;
+  padding: 100px 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0, 0.7)),
+   url('bg-video.png') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-cover__text {
+  width: 50%;
+  padding: 30px;
+}
+
+.bg-cover__title {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .bg-cover {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .bg-cover__text,
+  .bg-cover__title {
+    width: 100%;
+  }
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  max-width: 1350px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    flex-wrap: wrap;
+  }
+}
+
+.animated-titlelol {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 5s infinite, fade-in 3s ease-out;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+.button-grouplol {
+  display: flex;
+  flex-direction: column; /* Dispone i bottoni in colonna */
+}
+
+.button-grouplol a {
+  margin-bottom: 10px; /* Distanza tra i bottoni */
+}
+
+.support-buttonlol {
+    color: #ffd700; /* Colore del testo (giallo dorato) */
+    text-decoration: none;
+    border: 1px solid #ffd700; /* Bordo trasparente */
+    padding: 5px 10px;
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 14px;
+    transition: transform 0.2s ease; /* Aggiungi transizione per l'animazione */
+}
+
+.support-buttonlol:hover {
+    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
+    color: #000; /* Colore del testo al passaggio del mouse */
+    border: 1px solid #ffd700; /* Mantiene il bordo */
+    transform: scale(1.1); /* Aggiunge l'effetto di zoom */
+}
+
+.support-buttonlol2 {
+    color: #ffd700; /* Colore del testo (giallo dorato) */
+    text-decoration: none;
+    border: 1px solid #ffd700; /* Bordo trasparente */
+    padding: 5px 10px;
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 14px;
+    transition: transform 0.2s ease; /* Aggiungi transizione per l'animazione */
+      margin-top: 50px;
+}
+
+.support-buttonlol2:hover {
+    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
+    color: #000; /* Colore del testo al passaggio del mouse */
+    border: 1px solid #ffd700; /* Mantiene il bordo */
+    transform: scale(1.1); /* Aggiunge l'effetto di zoom */
+}
+
+
+.big-textlol {
+  font-size: 2.0rem;
+  text-align: left; /* Allinea la scritta a sinistra */
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 5s infinite, fade-in 3s ease-out;
+  white-space: nowrap; /* Evita che la scritta vada a capo */
+  margin: 0; /* Rimuove margini indesiderati */
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Per gestire l'allineamento della colonna */
+.grid .col {
+  text-align: left; /* Assicura l'allineamento a sinistra della colonna */
+  display: flex;
+  align-items: flex-start;
+}
+
+
+/* Poster */
+.poster {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: row-reverse; /* Imposta l'immagine a destra e la scritta a sinistra */
+  position: relative; /* Aggiungi position relative per il posizionamento dell'overlay */
+}
+
+.poster:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4); /* Sostituisci con il trasparente che volevi */
+  opacity: 0.4; /* Puoi regolare l'opacità come desideri */
+  pointer-events: none; /* Rende l'overlay non interattivo */
+  z-index: -1; /* Posiziona l'overlay dietro il contenuto */
+}
+
+.poster__content h3 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.poster__content h4 {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+042-
+.poster__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 70%;
+  margin-right: 20px;
+}
+
+.poster__img img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.poster__content {
+  width: 35%;
+  padding: 50px;
+  padding-left: 90px; /* Aumenta il padding a sinistra per spostare il contenuto più a sinistra */
+}
+
+.big-textsal {
+  font-size: 1.0rem;
+  text-align: left; /* Allinea la scritta a sinistra */
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 5s infinite, fade-in 3s ease-out;
+  white-space: nowrap; /* Evita che la scritta vada a capo */
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* Dispone i bottoni in colonna */
+}
+
+.button-group a {
+  margin-bottom: 10px; /* Distanza tra i bottoni */
+}
+
+.support-button {
+    color: #ffd700; /* Colore del testo (giallo dorato) */
+    text-decoration: none;
+    border: 1px solid #ffd700; /* Bordo trasparente */
+    padding: 5px 10px;
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 14px;
+    transition: transform 0.2s ease; /* Aggiungi transizione per l'animazione */
+}
+
+.support-button:hover {
+    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
+    color: #000; /* Colore del testo al passaggio del mouse */
+    border: 1px solid #ffd700; /* Mantiene il bordo */
+    transform: scale(1.1); /* Aggiunge l'effetto di zoom */
+}
+
+
+
+/* Panel Blue */
+.panel-blue {
+  background: #4bb1e9;
+  padding: 100px 30px;
+}
+
+.panel-blue__text {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  height: 250px;
+  width: 250px;
+  background: #6adf91;
+  border-radius: 100%;
+  line-height: 250px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+
+/* Typography and Helpers */
+.big-text {
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.normal-text {
+  font-size: 20px;
+}
+
+.tw {
+  color: #fff;
+}
+
+.mt-1 {
+  margin-top: 50px;
+}
+
+.mt-2 {
+  margin-top: 100px;
+}
+
+.mt-3 {
+  margin-top: 150px;
+}
+
+.mt-sma-0 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .big-text {
+    font-size: 40px;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: none; /* Rimuove qualsiasi background */
+  overflow: hidden;
+}
+
+.hero:after {
+  content: ''; /* Rimuove l'overlay */
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none; /* Nessun colore */
+  opacity: 0; /* Nessuna opacità */
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.hero__content h1,
+.hero__content p {
+  color: #fff; /* Mantieni il colore del testo */
+}
+
+.animated-title {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 5s infinite, fade-in 3s ease-out;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.description {
+  color: #bfbfbf;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px 0 0;
+  text-align: center;
+  animation: fade-in 3s ease-out;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+#video-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Posiziona il video dietro tutti gli altri elementi */
+  pointer-events: none; /* Rende il video non interattivo */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .animated-title {
+    font-size: 40px;
+  }
+}
