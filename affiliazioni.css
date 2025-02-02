@@ -23,8 +23,8 @@ body {
    color: #fff;
    text-transform: uppercase;
    white-space: nowrap;
-   position: fixed;
-   top: 58px; /* Aggiusta questo valore per allinearlo con il menu */
+   position: absolute; /* Cambiato da fixed a absolute */
+   top: 58px; /* Mantiene la posizione iniziale */
    left: 15px;
    z-index: 1000;
 }
