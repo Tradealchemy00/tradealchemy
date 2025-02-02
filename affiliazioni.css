@@ -315,8 +315,8 @@ body {
 
 @media (max-width: 768px) {
     .support-button {
-        font-size: 12px; /* Riduce leggermente il testo */
-        padding: 8px 16px; /* Riduce leggermente il bottone */
+        font-size: 11px; /* Riduce leggermente il testo */
+        padding: 6px 14px; /* Riduce leggermente il bottone */
     }
 }
 
