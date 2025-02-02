@@ -313,6 +313,13 @@ body {
     letter-spacing: 0.5px; /* Uniforma la spaziatura tra le lettere */
 }
 
+@media (max-width: 768px) {
+    .support-button {
+        font-size: 12px; /* Riduce leggermente il testo */
+        padding: 8px 16px; /* Riduce leggermente il bottone */
+    }
+}
+
 .support-button:hover {
     background-color: #ffd700;
     color: #000;
