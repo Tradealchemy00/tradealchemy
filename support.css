@@ -271,7 +271,12 @@ body {
 }
 
 .button-group {
-  margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Dispone i bottoni in colonna */
+    align-items: center; /* Centra i bottoni */
+    gap: 10px; /* Aggiunge spazio tra i bottoni */
+    margin-top: 30px;
+    width: 100%;
 }
 
 .support-list {
