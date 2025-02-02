@@ -344,6 +344,13 @@ body {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .support-lol {
+        font-size: 11px; /* Riduce leggermente il testo */
+        padding: 6px 14px; /* Riduce leggermente il bottone */
+    }
+}
+
 .support-lol:hover {
     background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
     color: #000; /* Colore del testo al passaggio del mouse */
