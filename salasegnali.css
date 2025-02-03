@@ -75,6 +75,22 @@ body {
     }
 }
 
+/* Aggiungi questo per far sparire il logo su mobile quando scrolli */
+@media (max-width: 768px) {
+  .logo {
+    position: fixed;
+    top: 20px; /* Posiziona in alto */
+    left: 15px; /* Posiziona a sinistra */
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .logo.hidden {
+    transform: translateY(-100px); /* Nasconde il logo quando scrolli */
+  }
+}
+
+
 /* ! Header */
 
 .header {
