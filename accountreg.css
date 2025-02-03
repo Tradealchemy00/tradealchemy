@@ -263,14 +263,33 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Ulteriore adattamento per schermi più piccoli */
+        padding: 15px;
+    }
+    
+    .form-buttons {
+        flex-direction: column; /* Pulsanti in colonna per evitare overflow */
+        gap: 10px; /* Aggiunge spazio tra i pulsanti */
+    }
+
+    .form-buttons button {
+        width: 100%; /* Pulsanti larghi quanto il form */
+    }
+}
+
 .container {
     position: relative;
-    width: 400px;
+    width: 90%; /* Usa una percentuale per adattarsi meglio agli schermi piccoli */
+    max-width: 400px; /* Mantiene una larghezza massima */
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+    margin: 0 auto; /* Centra l'elemento orizzontalmente */
 }
+
 
 .form-box {
     text-align: center;
@@ -301,14 +320,16 @@ body {
 }
 
 .form-group input {
-    width: 95%;
+    width: 100%; /* Rende i campi input adattabili alla larghezza del contenitore */
     padding: 10px;
     border: 1px solid #FFD700;
     border-radius: 5px;
     background: #000;
     color: #fff;
     font-size: 1rem;
+    box-sizing: border-box; /* Evita che padding e bordo influiscano sulla larghezza */
 }
+
 
 .password-group {
     position: relative;
