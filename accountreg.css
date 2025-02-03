@@ -12,6 +12,24 @@ body {
     font-family: 'Libre Baskerville', serif; /* Sostituisci con 'Liberation Serif' se disponibile */
       font-size: 16px;
 }
+.footer-content {
+    text-align: center; /* Allinea il testo al centro */
+    color: #ffffff; /* Imposta il colore del testo su bianco */
+    font-size: 14px; /* Imposta la dimensione del testo a 14px */
+    font-family: 'Libre Baskerville', serif; /* Usa il font specificato */
+    margin: 0; /* Rimuove il margine */
+    padding: 10px 0; /* Aggiungi un po' di spazio sopra e sotto */
+}
+
+.footer-content a {
+    color: #ffffff; /* Imposta il colore dei link su bianco */
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    font-size: 14px; /* Imposta la dimensione del font dei link uguale a quella del testo */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura quando il link è attivo */
+}
 
 @media (max-width: 768px) { /* Regola per dispositivi mobili */
     #video-back {
