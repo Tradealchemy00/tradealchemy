@@ -15,6 +15,17 @@ body {
       font-size: 16px;
 }
 
+@media (max-width: 768px) { /* Regola per dispositivi mobili */
+    #video-back {
+        display: none; /* Nasconde il video */
+    }
+
+    body {
+        background-color: #020d1a !important; /* Blu scuro */
+    }
+}
+
+
 @media (max-width: 768px) {
     .logo, .hamburger {
         position: fixed;
