@@ -52,6 +52,29 @@ body {
   100% { color: #FF0000; } /* Torna al rosso lime */
 }
 
+@media (max-width: 768px) {
+    .logo, .hamburger {
+        position: fixed;
+        top: 10px;
+        z-index: 9999;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo {
+        left: 10px;
+    }
+
+    .hamburger {
+        right: 10px;
+    }
+
+    /* Nasconde il logo e il menu quando si scrolla in basso */
+    .hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
 /* ! Header */
 
 .header {
