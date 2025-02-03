@@ -97,14 +97,13 @@ body {
   transition: background 0.3s ease;
 }
 
-
 /* Sotto-menu */
 .submenu {
   list-style: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #000000; /* Nero assoluto */
+ background-color: #000000; /* Nero assoluto */
   display: none;
   padding: 0;
   margin: 0;
@@ -127,17 +126,6 @@ body {
 .submenu li a:hover {
   color: #fff; /* Colore del testo bianco anche su hover */
   animation: gradient-move 5s infinite, fade-in 0.5s ease-out;
-}
-
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes fade-in {
-  0% { opacity: 0; transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
 }
 
 /* Mostra il sotto-menu al passaggio del mouse */
@@ -239,6 +227,13 @@ body {
     100% { opacity: 1; transform: scale(1); }
 }
 
+@media (max-width: 768px) {
+    .animated-title {
+        position: relative;
+        top: 80px; /* Abbassa la scritta */
+    }
+}
+
 
 .non-disponibile {
   font-size: 12px; /* Imposta la dimensione del font più piccola */
@@ -262,17 +257,17 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 20px;
-  width: 60%; /* Larghezza predefinita per schermi più grandi */
-  max-width: 700px; /* Limite massimo di larghezza */
-  background: linear-gradient(145deg, #1e1e1e, #292929);
-  box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
-  border-radius: 15px;
-  text-align: center;
-  margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Rende le colonne della stessa altezza */
+    padding: 50px 20px;
+    width: 60%;
+    max-width: 700px;
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #343434;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 100px;
 }
 
 /* Adattamento per dispositivi mobili */
@@ -297,6 +292,9 @@ body {
 
 .column {
     flex: 1;
+    display: flex;
+    flex-direction: column; /* Mantiene il contenuto impilato */
+    justify-content: space-between; /* Distribuisce lo spazio equamente */
     background: linear-gradient(145deg, #222222, #2a2a2a);
     padding: 20px;
     text-align: center;
@@ -309,6 +307,7 @@ body {
     transform: scale(1.05);
     box-shadow: 10px 10px 20px #0c0c0c, -10px -10px 20px #484848;
 }
+
 
 .signal-button {
     display: inline-block;
