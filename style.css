@@ -650,3 +650,17 @@ html, body {
     margin-left: 20px;
   }
 }
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+  .animated-titlelol {
+    font-size: 2rem; /* Riduci la dimensione del font per schermi piccoli */
+    padding: 0 10px; /* Aggiungi un po' di padding laterale per evitare che il testo tocchi i bordi */
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-titlelol {
+    font-size: 1.5rem; /* Ulteriore riduzione per dispositivi molto piccoli */
+  }
+}
