@@ -12,34 +12,6 @@ body {
     font-family: 'Libre Baskerville', serif; /* Sostituisci con 'Liberation Serif' se disponibile */
       font-size: 16px;
 }
-.footer-content {
-    text-align: center; /* Allinea il testo al centro */
-    color: #ffffff; /* Imposta il colore del testo su bianco */
-    font-size: 14px; /* Imposta la dimensione del testo a 14px */
-    font-family: 'Libre Baskerville', serif; /* Usa il font specificato */
-    margin: 0; /* Rimuove il margine */
-    padding: 10px 0; /* Aggiungi un po' di spazio sopra e sotto */
-}
-
-.footer-content a {
-    color: #ffffff; /* Imposta il colore dei link su bianco */
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
-    font-size: 14px; /* Imposta la dimensione del font dei link uguale a quella del testo */
-}
-
-.footer-content a:hover {
-    text-decoration: underline; /* Aggiunge la sottolineatura quando il link è attivo */
-}
-
-@media (max-width: 768px) { /* Regola per dispositivi mobili */
-    #video-back {
-        display: none; /* Nasconde il video */
-    }
-
-    body {
-        background-color: #020d1a !important; /* Blu scuro */
-    }
-}
 
 .li {
   font-size: 14px;
@@ -95,45 +67,6 @@ body {
     pointer-events: none; /* Rende il video non interattivo */
 }
 
-@media (max-width: 768px) {
-    .logo, .hamburger {
-        position: fixed;
-        top: 10px;
-        z-index: 9999;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .logo {
-        left: 13px;
-    }
-
-    .hamburger {
-        right: 10px;
-    }
-
-    /* Nasconde il logo e il menu quando si scrolla in basso */
-    .hidden {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
-
-/* Aggiungi questo per far sparire il logo su mobile quando scrolli */
-@media (max-width: 768px) {
-  .logo {
-    position: fixed;
-    top: 20px; /* Posiziona in alto */
-    left: 15px; /* Posiziona a sinistra */
-    z-index: 1000;
-    transition: transform 0.3s ease;
-  }
-
-  .logo.hidden {
-    transform: translateY(-100px); /* Nasconde il logo quando scrolli */
-  }
-}
-
-
 /* ! Header */
 
 .header {
@@ -185,8 +118,8 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
- background-color: #000000; /* Nero assoluto */
-display: none;
+  background-color: rgba(0, 0, 0, 0.005); /* Sfondo trasparente */
+  display: none;
   padding: 0;
   margin: 0;
   z-index: 10;
@@ -364,6 +297,7 @@ display: none;
   margin-right: 5px; /* Distanza tra spunta e testo */
 }
 
+
 .support-button {
     display: inline-block;
     width: auto; /* Evita che il bottone sia troppo largo */
@@ -380,6 +314,13 @@ display: none;
     letter-spacing: 0.5px; /* Uniforma la spaziatura tra le lettere */
 }
 
+@media (max-width: 768px) {
+    .support-button {
+        font-size: 12px; /* Riduce leggermente il testo */
+        padding: 8px 16px; /* Riduce leggermente il bottone */
+    }
+}
+
 .support-button:hover {
     background-color: #ffd700;
     color: #000;
@@ -388,13 +329,29 @@ display: none;
 
 .button-group {
     display: flex;
-    flex-direction: column; /* Dispone i bottoni in colonna */
-    align-items: center; /* Centra i bottoni */
-    gap: 10px; /* Aggiunge spazio tra i bottoni */
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
     width: 100%;
 }
 
+
+
+.support-lol {
+    color: #ffd700; /* Colore del testo (giallo dorato) */
+    text-decoration: none;
+    border: 1px solid #ffd700; /* Bordo trasparente */
+    padding: 5px 10px;
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.support-lol:hover {
+    background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
+    color: #000; /* Colore del testo al passaggio del mouse */
+    border: 1px solid #ffd700; /* Mantiene il bordo */
+}
 
 
 .support-label {
@@ -408,28 +365,4 @@ display: none;
     color: #fff; /* Colore del testo */
     display: block; /* Forza il testo ad andare a capo */
     margin-top: 5px; /* Spazio sopra il testo */
-}
-
-
-@media screen and (max-width: 768px) {
-    .support-list {
-        padding-left: 0; /* Rimuove il padding sinistro */
-    }
-
-    .support-list li {
-        display: flex;
-        align-items: center;
-        text-align: left; /* Assicura che il testo inizi da sinistra */
-    }
-
-    .support-list li::before {
-        content: "✔"; /* Simbolo di spunta */
-        color: yellow;
-        font-size: 1.2em;
-        margin-right: 10px; /* Distanza tra la spunta e il testo */
-    }
-}
-
-.support-list li {
-    margin-bottom: 3mm; /* Aggiunge uno spazio di 3mm tra le voci della lista */
 }
