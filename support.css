@@ -433,3 +433,15 @@ display: none;
 .support-list li {
     margin-bottom: 3mm; /* Aggiunge uno spazio di 3mm tra le voci della lista */
 }
+
+@media (max-width: 768px) {  /* Regola valida solo per dispositivi mobili */
+    .logo {
+        margin-left: 20px; /* Sposta il logo 10px a destra */
+    }
+}
+
+@media (min-width: 769px) {  /* Valido per desktop */
+    .logo {
+        margin-left: -30px; /* Sposta il logo leggermente a sinistra */
+    }
+}
