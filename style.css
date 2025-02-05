@@ -1,3 +1,7 @@
+
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +16,10 @@ body {
     font-family: 'Libre Baskerville', serif; /* Sostituisci con 'Liberation Serif' se disponibile */
       font-size: 16px;
 }
-
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 .footer-content {
     text-align: center; /* Allinea il testo al centro */
     color: #ffffff; /* Imposta il colore del testo su bianco */
