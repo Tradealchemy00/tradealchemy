@@ -446,6 +446,14 @@ display: none;
     margin-bottom: 3mm; /* Aggiunge uno spazio di 3mm tra le voci della lista */
 }
 
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .support-lol {
+        font-size: 12px;  /* Riduci leggermente la dimensione del testo */
+        padding: 4px 8px;  /* Riduci il padding */
+    }
+}
+
 @media (max-width: 768px) {  /* Regola valida solo per dispositivi mobili */
     .logo {
         margin-left: 20px; /* Sposta il logo 10px a destra */
