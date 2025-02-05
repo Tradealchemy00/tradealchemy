@@ -379,6 +379,14 @@ display: none;
     transition: all 0.3s ease;
 }
 
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .support-button {
+        font-size: 12px;  /* Riduci leggermente la dimensione del testo */
+        padding: 4px 8px;  /* Riduci il padding */
+    }
+}
+
 .support-button:hover {
     background-color: #ffd700; /* Colore di sfondo al passaggio del mouse */
     color: #000; /* Colore del testo al passaggio del mouse */
