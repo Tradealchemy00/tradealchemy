@@ -665,3 +665,23 @@ html, body {
     font-size: 1.5rem; /* Ulteriore riduzione per dispositivi molto piccoli */
   }
 }
+
+
+/* Default: version desktop - tutti gli elementi in linea */
+.first-part,
+.comma,
+.second-part {
+  display: inline;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+  .first-part,
+  .second-part {
+    display: block; /* Ogni parte su una nuova riga */
+  }
+
+  .comma {
+    display: none; /* Nascondi la virgola */
+  }
+}
