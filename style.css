@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -322,54 +321,6 @@ html, body {
   width: 100%;
 }
 
-
-
-/* BG Cover */
-.bg-cover {
-  display: flex;
-  padding: 100px 0;
-  background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0, 0.7)),
-   url('bg-video.png') no-repeat center center;
-  background-size: cover;
-}
-
-.bg-cover__text {
-  width: 50%;
-  padding: 30px;
-}
-
-.bg-cover__title {
-  width: 50%;
-  padding: 50px;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .bg-cover {
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .bg-cover__text,
-  .bg-cover__title {
-    width: 100%;
-  }
-}
-
-/* Grid */
-.grid {
-  display: flex;
-  max-width: 1350px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .grid {
-    flex-wrap: wrap;
-  }
-}
-
 .animated-titlelol {
   font-size: 3rem;
   text-align: center;
@@ -404,8 +355,6 @@ html, body {
     transform: scale(1);
   }
 }
-
-
 
 .button-grouplol {
   display: flex;
@@ -451,145 +400,6 @@ html, body {
     transform: scale(1.1); /* Aggiunge l'effetto di zoom */
 }
 
-
-.big-textlol {
-  font-size: 2.0rem;
-  text-align: left; /* Allinea la scritta a sinistra */
-  font-weight: bold;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
-  background-size: 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-move 5s infinite, fade-in 3s ease-out;
-  white-space: nowrap; /* Evita che la scritta vada a capo */
-  margin: 0; /* Rimuove margini indesiderati */
-}
-
-@keyframes gradient-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Per gestire l'allineamento della colonna */
-.grid .col {
-  text-align: left; /* Assicura l'allineamento a sinistra della colonna */
-  display: flex;
-  align-items: flex-start;
-}
-
-
-/* Poster */
-.poster {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  flex-direction: row-reverse; /* Imposta l'immagine a destra e la scritta a sinistra */
-  position: relative; /* Aggiungi position relative per il posizionamento dell'overlay */
-}
-
-.poster:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4); /* Sostituisci con il trasparente che volevi */
-  opacity: 0.4; /* Puoi regolare l'opacità come desideri */
-  pointer-events: none; /* Rende l'overlay non interattivo */
-  z-index: -1; /* Posiziona l'overlay dietro il contenuto */
-}
-
-.poster__content h3 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.poster__content h4 {
-  font-size: 1.2rem;
-  color: #888;
-  margin-bottom: 1rem;
-}
-
-042-
-.poster__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 55%;
-  height: 70%;
-  margin-right: 20px;
-}
-
-.poster__img img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-
-.poster__content {
-  width: 35%;
-  padding: 50px;
-  padding-left: 90px; /* Aumenta il padding a sinistra per spostare il contenuto più a sinistra */
-}
-
-.big-textsal {
-  font-size: 1.0rem;
-  text-align: left; /* Allinea la scritta a sinistra */
-  font-weight: bold;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #ffffff, #00ff00, #ff0000, #ffd700, #c0c0c0);
-  background-size: 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-move 5s infinite, fade-in 3s ease-out;
-  white-space: nowrap; /* Evita che la scritta vada a capo */
-}
-
-@keyframes gradient-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 .button-group {
   display: flex;
   flex-direction: column; /* Dispone i bottoni in colonna */
@@ -615,69 +425,6 @@ html, body {
     border: 1px solid #ffd700; /* Mantiene il bordo */
     transform: scale(1.1); /* Aggiunge l'effetto di zoom */
 }
-
-
-
-/* Panel Blue */
-.panel-blue {
-  background: #4bb1e9;
-  padding: 100px 30px;
-}
-
-.panel-blue__text {
-  display: flex;
-  align-items: center;
-}
-
-.dot {
-  height: 250px;
-  width: 250px;
-  background: #6adf91;
-  border-radius: 100%;
-  line-height: 250px;
-  text-align: center;
-  display: inline-block;
-  margin-right: 40px;
-  margin-bottom: 40px;
-}
-
-
-/* Typography and Helpers */
-.big-text {
-  font-size: 70px;
-  font-weight: 900;
-}
-
-.normal-text {
-  font-size: 20px;
-}
-
-.tw {
-  color: #fff;
-}
-
-.mt-1 {
-  margin-top: 50px;
-}
-
-.mt-2 {
-  margin-top: 100px;
-}
-
-.mt-3 {
-  margin-top: 150px;
-}
-
-.mt-sma-0 {
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
-  .big-text {
-    font-size: 40px;
-  }
-}
-
 
 /* Hero Section */
 .hero {
