@@ -530,3 +530,120 @@ html, body {
     font-size: 40px;
   }
 }
+
+
+
+.new-section {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  width: 100%;
+  min-height: 20vh;
+  box-sizing: border-box;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+}
+
+.section-container.left {
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+}
+
+.section-container.right {
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 5%; /* Aggiunge spazio a sinistra per distanziarlo dal centro */
+}
+
+
+.section-item {
+  font-size: 3vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00ff00, #ff0000, #ffd700);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.descriptionitem {
+  color: #bfbfbf;
+  font-size: 1.2vw;
+  margin-top: 5px;
+}
+
+.support-button {
+  color: #ffd700;
+  text-decoration: none;
+  border: 1px solid #ffd700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.support-button:hover {
+  background-color: #ffd700;
+  color: #000;
+  border: 1px solid #ffd700;
+  transform: scale(1.1);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-group a {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .new-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 5vw;
+  }
+
+  .section-container {
+    width: 100%;
+    max-width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-item {
+    font-size: 6vw;
+  }
+
+  .descriptionitem {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto; /* Centra entrambe le sezioni */
+    padding-left: 0 !important; /* Rimuove il padding extra */
+  }
+
+  .section-container.right {
+    padding-left: 0; /* Corregge lo spostamento della parte destra */
+  }
+}
