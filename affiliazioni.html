@@ -8,9 +8,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="logo">
-        <span class="trade">Trade</span> <span class="alchemy">Alchemy</span>
-    </div>
 <div class="header">
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
@@ -18,33 +15,41 @@
       <a href="#">Trading</a>
       <ul class="submenu">
         <li><a href="salasegnali.html">Sale segnali</a></li>
-        <li><a href="bot.html">Bot copy trading</a></li>
+        <li><a href="bot.html">I nostri bot telegram</a></li>
         <li><a href="nondisponibile.html">Indicatore tradingview</a></li>
+        <li><a href="nondisponibilecopy.HTML">Il nostro copy trading</a></li>
+          <li><a href="#">il nostro broker axi</a></li>
       </ul>
     </li>
     <li class="has-submenu">
   <a href="#">Formazione e Live</a>
   <ul class="submenu">
       <li><a href="nondisponibileformazione.html">one to one</a></li>
+      <li><a href="nondisponibilelibro.html">libro trading</a></li>
       <li><a href="lives.html">Live</a></li>
-      <li><a href="https://www.instagram.com/trade_alchemy._" target="_blank">Instagram</a></li>
+      <li><a href="https://instagram.com/tradealchemyvip" target="_blank">Instagram</a></li>
   </ul>
 </li>
     <li><a href="affiliazioni.html">Affiliazioni</a></li>
     <li class="has-submenu">
       <a href="#">Chi Siamo</a>
       <ul class="submenu">
-        <li><a href="https://www.instagram.com/trade_alchemy._" target="_blank">Instagram 1</a></li>
+        <li><a href="https://instagram.com/tradealchemyvip" target="_blank">Instagram 1</a></li>
         <li><a href="https://t.me/tradealchemy" target="_blank">canale Telegram</a></li>
         <li><a href="https://instagram.com/blesszava" target="_blank">Instagram 2</a></li>
         <li><a href="https://wa.me/+393517025647" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.myfxbook.com/" target="_blank">Myfxbook</a></li>
       </ul>
     </li>
     <li class="has-submenu">
-      <a href="reces.html">Recensioni</a>
+      <a href="#">Recensioni</a>
+      <ul class="submenu">
+        <li><a href="reces.html">Recensioni</a></li>
+        <li><a href="https://www.myfxbook.com/" target="_blank">Myfxbook</a></li>
+      </ul>
     </li>
       <li><a href="support.html">supporto</a></li>
-    
+
     <li>
     <div class="cta">
       <input type="text" placeholder="Cerca..." class="search-bar">
@@ -125,27 +130,5 @@
      ScrollReveal().reveal('.zoom', { duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 200, scale: 0.65, mobile: false });
    </script>
 
-        <script>
-          let lastScrollTop = 0;
-          window.addEventListener("scroll", function() {
-              let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-              if (currentScroll > lastScrollTop) {
-                  // Scroll verso il basso → nasconde il logo e il menu
-                  document.querySelector(".logo").classList.add("hidden");
-                  document.querySelector(".hamburger").classList.add("hidden");
-              } else {
-                  // Scroll verso l'alto → mostra il logo e il menu
-                  document.querySelector(".logo").classList.remove("hidden");
-                  document.querySelector(".hamburger").classList.remove("hidden");
-              }
-              lastScrollTop = currentScroll;
-          });
-      </script>
-
-    <div class="footer-content">
-            <p>Copyright &copy; 2025 Trade Alchemy - Tutti i diritti riservati</p>
-            <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Termini di Utilizzo</a></p>
-        </div>
-    
 </body>
 </html>
