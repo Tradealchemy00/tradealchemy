@@ -366,3 +366,22 @@ body {
     display: block; /* Forza il testo ad andare a capo */
     margin-top: 5px; /* Spazio sopra il testo */
 }
+
+@media screen and (max-width: 768px) {
+    .support-list {
+        padding-left: 0; /* Rimuove il padding sinistro */
+    }
+
+    .support-list li {
+        display: flex;
+        align-items: center;
+        text-align: left; /* Assicura che il testo inizi da sinistra */
+    }
+
+    .support-list li::before {
+        content: "✔"; /* Simbolo di spunta */
+        color: yellow;
+        font-size: 1.2em;
+        margin-right: 10px; /* Distanza tra la spunta e il testo */
+    }
+}
