@@ -646,4 +646,7 @@ html, body {
   .section-container.right {
     padding-left: 0; /* Corregge lo spostamento della parte destra */
   }
+    .section-container.left {
+    margin-left: 20px;
+  }
 }
