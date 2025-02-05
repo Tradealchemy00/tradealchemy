@@ -331,6 +331,7 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-move 5s infinite, fade-in 3s ease-out;
+    margin-top: 80px;
 }
 
 @keyframes gradient-move {
