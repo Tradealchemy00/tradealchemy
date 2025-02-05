@@ -430,3 +430,6 @@ display: none;
     }
 }
 
+.support-list li {
+    margin-bottom: 3mm; /* Aggiunge uno spazio di 3mm tra le voci della lista */
+}
