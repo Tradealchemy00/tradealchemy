@@ -296,7 +296,7 @@ body {
         width: 95%; /* Ulteriore adattamento per schermi più piccoli */
         padding: 15px;
     }
-    
+
     .form-buttons {
         flex-direction: column; /* Pulsanti in colonna per evitare overflow */
         gap: 10px; /* Aggiunge spazio tra i pulsanti */
