@@ -295,6 +295,7 @@ body {
     .container {
         width: 95%; /* Ulteriore adattamento per schermi più piccoli */
         padding: 15px;
+           margin-top: 100px;
     }
 
     .form-buttons {
@@ -316,6 +317,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
     margin: 0 auto; /* Centra l'elemento orizzontalmente */
+      margin-top: 100px;
 }
 
 
