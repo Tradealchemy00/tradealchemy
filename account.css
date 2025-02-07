@@ -16,7 +16,7 @@ body {
   width: 100%;
   height: 100vh;
   padding-left: 20px;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 .account-box {
@@ -89,33 +89,44 @@ body {
   flex-direction: column;
   gap: 10px;
   width: 100%; /* Rende i bottoni più larghi rispetto al box */
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .account-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-align: left;
-  padding-left: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background: #333;
+    color: #FFD700;
+    border: 1px solid #FFD700;
 }
 
 .account-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .logout {
-  background-color: #dc3545;
+    background: red;
+    color: white;
+    border: none;
 }
 
-.logout:hover {
-  background-color: #a71d2a;
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .account-button {
+        width: 100%;
+    }
 }
+
 
 .close-button {
   position: absolute;
@@ -136,6 +147,15 @@ body {
 }
 
 
+#video-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
 
 .logo {
