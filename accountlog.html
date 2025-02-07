@@ -123,6 +123,31 @@
           });
       </script>
 
+    <script>
+    document.getElementById('login-button').addEventListener('click', function(event) {
+        const emailField = document.getElementById('email');
+        const passwordField = document.getElementById('password');
+        const emailValue = emailField.value.trim();
+        const passwordValue = passwordField.value.trim();
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(emailValue)) {
+            alert('Inserisci un indirizzo email valido.');
+            emailField.focus();
+            return;
+        }
+
+        if (passwordValue.length < 6) {
+            alert('La password deve avere almeno 6 caratteri.');
+            passwordField.focus();
+            return;
+        }
+
+        window.location.href = 'emailcode.html';
+    });
+  </script>
+
   <script>
       // Show/hide password toggle
       const togglePassword = document.getElementById('togglePassword');
