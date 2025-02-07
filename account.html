@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - TradeAlchemy</title>
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="logo">
+      <span class="trade">Trade</span> <span class="alchemy">Alchemy</span>
+  </div>
+  <div class="header">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-submenu">
+        <a href="#">Trading</a>
+        <ul class="submenu">
+          <li><a href="salasegnali.html">Sale segnali</a></li>
+          <li><a href="bot.html">I nostri bot telegram</a></li>
+          <li><a href="nondisponibile.html">Indicatore tradingview</a></li>
+          <li><a href="nondisponibilecopy.HTML">Il nostro copy trading</a></li>
+            <li><a href="#">il nostro broker axi</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+    <a href="#">Formazione e Live</a>
+    <ul class="submenu">
+        <li><a href="nondisponibileformazione.html">one to one</a></li>
+        <li><a href="nondisponibilelibro.html">libro trading</a></li>
+        <li><a href="lives.html">Live</a></li>
+        <li><a href="https://instagram.com/tradealchemyvip" target="_blank">Instagram</a></li>
+    </ul>
+  </li>
+      <li><a href="affiliazioni.html">Affiliazioni</a></li>
+      <li class="has-submenu">
+        <a href="#">Chi Siamo</a>
+        <ul class="submenu">
+          <li><a href="https://instagram.com/tradealchemyvip" target="_blank">Instagram 1</a></li>
+          <li><a href="https://t.me/tradealchemy" target="_blank">canale Telegram</a></li>
+          <li><a href="https://instagram.com/blesszava" target="_blank">Instagram 2</a></li>
+          <li><a href="https://wa.me/+393517025647" target="_blank">WhatsApp</a></li>
+          <li><a href="https://www.myfxbook.com/" target="_blank">Myfxbook</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Recensioni</a>
+        <ul class="submenu">
+          <li><a href="reces.html">Recensioni</a></li>
+          <li><a href="https://www.myfxbook.com/" target="_blank">Myfxbook</a></li>
+        </ul>
+      </li>
+        <li><a href="support.html">supporto</a></li>
+
+      <li>
+      <div class="cta">
+        <input type="text" placeholder="Cerca..." class="search-bar">
+      </div>
+    </li>
+    <li class="has-submenu">
+    <a href="#">
+        <img src="user.png" alt="User Menu" style="width: 30px; height: 30px; vertical-align: middle;"> <!-- Logo user.png -->
+    </a>
+  </li>
+    </ul>
+
+    </div>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+
+      <div class="account-container">
+        <div class="account-box">
+          <button class="close-button">−</button>
+            <div class="left-section">
+                <img src="user.png" alt="User Profile" class="profile-img">
+                <h2 class="username">Nome Utente</h2>
+                <h2 class="user-email">email@example.com</h2>
+                <div class="button-group">
+                    <button class="account-button" data-content="Queste sono le informazioni di accesso dell'utente, includendo dati sensibili e altro.">
+                        Informazioni d'accesso
+                    </button>
+                    <button class="account-button" data-content="Qui puoi visualizzare i tuoi abbonamenti attivi e i dettagli di pagamento relativi.">
+                        Abbonamenti
+                    </button>
+                    <button class="account-button" data-content="Metodi di pagamento registrati, carte salvate e ultime transazioni effettuate.">
+                        Informazioni di pagamento
+                    </button>
+                    <button class="account-button logout">Esci</button>
+                </div>
+            </div>
+            <div class="right-section">
+                <p id="dynamic-content"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".account-button");
+            const accountBox = document.querySelector(".account-box");
+            const contentBox = document.querySelector(".right-section");
+            const dynamicContent = document.getElementById("dynamic-content");
+            const closeButton = document.querySelector(".close-button");
+            let isExpanded = false;
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    if (!this.classList.contains("logout")) {
+                        const content = this.getAttribute("data-content");
+
+                        if (!isExpanded) {
+                            accountBox.style.width = "700px"; // Espande il box a destra
+                            setTimeout(() => {
+                                dynamicContent.textContent = content;
+                                contentBox.style.opacity = "1";
+                            }, 1000); // Aspetta 1 secondo prima di mostrare il testo
+                        } else {
+                            dynamicContent.textContent = content;
+                        }
+
+                        isExpanded = true;
+                    }
+                });
+            });
+
+            closeButton.addEventListener("click", function () {
+                if (isExpanded) {
+                    contentBox.style.opacity = "0"; // Nasconde il testo
+                    setTimeout(() => {
+                        dynamicContent.textContent = ""; // Svuota il testo dopo l'animazione
+                        accountBox.style.width = "300px"; // Torna alla dimensione originale
+                        isExpanded = false; // Ripristina lo stato
+                    }, 500);
+                }
+            });
+
+            // Messaggio di conferma per il logout
+            const logoutButton = document.querySelector(".logout");
+            logoutButton.addEventListener("click", function () {
+                if (confirm("Sei sicuro di voler uscire?")) {
+                    window.location.href = "login.html";
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>
