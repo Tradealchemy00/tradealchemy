@@ -6,9 +6,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    padding: 20px; /* Aggiungi un po' di padding per evitare che il contenuto tocchi i bordi */
-    box-sizing: border-box; /* Per evitare che il padding influisca sulle dimensioni totali */
-    position: relative; /* Per gestire gli z-index */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto; /* Aggiungi questa riga per permettere lo scroll */
 }
 
 .payment-container {
@@ -23,7 +24,13 @@ body {
     box-sizing: border-box;
     position: relative;
     z-index: 10;
-    padding-bottom: 0; /* Rimuovi il padding inferiore */
+    padding-bottom: 0; /* Riduci il padding inferiore */
+    overflow: hidden; /* Evita che si sposti fuori dal box */
+}
+
+.payment-button {
+    padding: 12px;
+    margin: 10px 0;
 }
 
 h2 {
@@ -38,7 +45,7 @@ p {
 
 .back-button {
     display: inline-block;
-    margin-top: 10px; /* Riduci il margine superiore */
+    margin-top: 0px; /* Riduci il margine superiore */
     text-decoration: none;
     color: #007bff;
     font-size: 14px;
@@ -67,4 +74,8 @@ p {
 #paypal-button-container iframe {
     position: relative;
     z-index: 100; /* Assicura che l'iframe di PayPal sia sopra altri elementi */
+}
+
+#paypal-button-container {
+    margin-bottom: 10px; /* Riduci il margine sotto il bottone PayPal */
 }
