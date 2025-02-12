@@ -42,5 +42,14 @@
         }).render('#paypal-button-container');
     </script>
 
+    <script>
+      window.onload = function() {
+          setTimeout(function() {
+              window.scrollTo(0, document.body.scrollHeight);
+          }, 500); // Aggiungi un piccolo ritardo per il caricamento
+      };
+  </script>
+
+
 </body>
 </html>
