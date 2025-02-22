@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Stripe</title>
+    <link rel="stylesheet" href="checkout-stripe.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <h2>Pagamento con Stripe</h2>
+        <p>Clicca il bottone qui sotto per procedere al pagamento.</p>
+
+        <button id="checkout-button">Paga ora</button>
+        <a href="bot.html" class="back-button">← Torna indietro</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var stripe = Stripe("pk_live_51Qhx6wH7b4M8PicMYFybWTYqraNhPs3rierkdyFZLgJSGpl20e5T7MsmzwrhnpmsHj45GZl1H9zUXaeJukcVoKpF000ZxYIDmR");
+            var checkoutButton = document.getElementById("checkout-button");
+
+            checkoutButton.addEventListener("click", function() {
+                fetch("/create-checkout-session", { method: "POST" })
+                .then(response => response.json())
+                .then(session => {
+                    return stripe.redirectToCheckout({ sessionId: session.id });
+                })
+                .then(result => {
+                    if (result.error) {
+                        alert(result.error.message);
+                    }
+                })
+                .catch(error => console.error("Errore durante il checkout:", error));
+            });
+        });
+    </script>
+
+</body>
+</html>
